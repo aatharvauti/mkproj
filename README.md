@@ -2,15 +2,15 @@
 ---
 
 # Goal: Automate Making Projects using Python & Shell
-<br>
+
 ## What do I mean when I wanna start a Project?
-<br>
+
 #### Simple Answer:
 - Create a New Directory
 - Add README and .gitignore (Depending on the Project) 
 - Do some magic using GitHub
 - code . (mostly)
-<br>
+
 #### Technical Answer (and EL Plan):
 - [ ] Argument Parser will play a key role: DESIGN THE PROGRAM
 - [ ] Navigate to $HOME/code (This is my projects folder)
@@ -25,7 +25,7 @@
 - [ ] `git push -u origin main`
 - [ ] `code .`
 
-<br>
+
 ### Requirements
 ---
 
