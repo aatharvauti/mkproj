@@ -12,11 +12,11 @@
 - code . (mostly)
 
 #### Technical Answer (and EL Plan):
-- [x] Help Menu
-- [x] Argument Parser will play a key role: DESIGN THE PROGRAM
-- [x] Navigate to $HOME/code (This is my projects folder)
-- [x] `mkdir $1` 
-- [x] `touch README.md && echo "# ${1}" >> README.md`
+- [x] ~~Help Menu~~
+- [x] ~~Argument Parser will play a key role: DESIGN THE PROGRAM~~
+- [x] ~~Navigate to $HOME/code (This is my projects folder)~~
+- [x] ~~`mkdir $NAME && cd $NAME`~~
+- [x] ~~`touch README.md && echo "# ${NAME}" >> README.md`~~
 - [ ] `gi "bunch,of,arguments,again,depends,on,the,project"`
 - [ ] `git init`
 - [ ] Web Scraping using Selenium to Create a GitHub Repository
