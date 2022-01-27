@@ -17,7 +17,7 @@
 - [x] ~~Navigate to $HOME/code (This is my projects folder)~~
 - [x] ~~`mkdir $NAME && cd $NAME`~~
 - [x] ~~`touch README.md && echo "# ${NAME}" >> README.md`~~
-- [ ] `gi "bunch,of,arguments,again,depends,on,the,project"`
+- [x] ~~`wget "bunch,of,arguments,again,depends,on,the,project"`~~
 - [ ] `git init`
 - [ ] Web Scraping using Selenium to Create a GitHub Repository
 - [ ] `git remote add origin git@github.com:username/{$1}.git`
@@ -35,7 +35,7 @@
 	
 		python3 -m pip install -r requirements.txt
 
-- [gi command line](https://docs.gitignore.io/install/command-line)
+- wget tool
 - idk if anything else, open an issue if something's missing :)
 
 ---

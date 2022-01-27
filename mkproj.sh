@@ -90,7 +90,11 @@ MAIN () {
 
     echo "Creating Project ${NAME}"
     cd $HOME/code/ && mkdir $NAME && cd $NAME && touch README.md && echo "# ${NAME}" >> README.md
-
+    
+    if [ $GITIGNORE = true ]; then
+        wget -c https://www.toptal.com/developers/gitignore/api/$VALUES_GI -O .gitignore 2>/dev/null
+    fi
+    
 }
 
 MAIN
