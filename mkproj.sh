@@ -20,12 +20,13 @@ echo -e "
 
     Usage: mkproj {Project Name} [Space-Separated Options] 
 
-        -c, --code           Automatically opens Visual Studio Code
         -h, --help           Open this help menu
+        -n, --name           Project Name
         -g, --gitignore      Use .gitignore
         -p, --public         Set GitHub Repository Visibility to Public
+        -c, --code           Automatically opens Visual Studio Code
 
-    Ex: mkproj MySexyPythonProject -p -c -g \"python,jupyternotebooks,linux,visualstudiocode,pycharm\"
+    Ex: mkproj -n MySexyPythonProject -p -c -g \"python,jupyternotebooks,linux,visualstudiocode,pycharm\"
 
 "
 exit
@@ -36,6 +37,7 @@ exit
 CODE=false
 PUBLIC=false
 GITIGNORE=false
+NAME=""
 
 POSITIONAL_ARGS=()
 
@@ -44,6 +46,11 @@ while [[ $# -gt 0 ]]; do
         -h|--help)
             shift # past argument
             HELP
+            ;;
+        -n|--name)
+            NAME=$2
+            shift # past argument
+            shift # past value
             ;;
         -c|--code)
             shift # past argument
