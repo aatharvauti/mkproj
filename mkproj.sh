@@ -84,3 +84,13 @@ if [[ -n $1 ]]; then
     echo "Last line of file specified as non-opt/last argument:"
     tail -1 "$1"
 fi
+
+
+MAIN () {
+
+    echo "Creating Project ${NAME}"
+    cd $HOME/code/ && mkdir $NAME && cd $NAME && touch README.md && echo "# ${NAME}" >> README.md
+
+}
+
+MAIN
