@@ -126,6 +126,14 @@ MAIN () {
             python3 -W ignore $HOME/code/mkproj/mkrepo.py $NAME --private
         fi
     fi
+
+    git init 2>/dev/null
+    git branch -M main
+    git remote add origin git@github.com:aatharvauti/$NAME.git
+    git add README.md && git commit -m "initial commit"
+    git add .gitignore && git commit -m ".gitignore"
+    git push -u origin main
+    rm geckodriver.log
 }
 
 MAIN

@@ -19,12 +19,12 @@
 - [x] ~~`touch README.md && echo "# ${NAME}" >> README.md`~~
 - [x] ~~`wget "bunch,of,arguments,again,depends,on,the,project"`~~
 - [x] ~~Web Scraping using Selenium to Create a GitHub Repository~~
-- [ ] `git init`
-- [ ] `git remote add origin git@github.com:username/{$1}.git`
-- [ ] `git branch -m main`
-- [ ] `git add .`
-- [ ] `git commit -m "initial commit"`
-- [ ] `git push -u origin main`
+- [x] ~~`git init`~~
+- [x] ~~`git remote add origin git@github.com:username/{$1}.git`~~
+- [x] ~~`git branch -m main`~~
+- [x] ~~`git add .`~~
+- [x] ~~`git commit -m "initial commit"`~~
+- [x] ~~`git push -u origin main`~~
 - [ ] `code .`
 
 
