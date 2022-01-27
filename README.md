@@ -28,6 +28,7 @@
 - [x] ~~`code .`~~
 
 <br>
+
 ### Installation
 ---
 
@@ -41,6 +42,7 @@
 - idk if anything else, open an issue if something's missing :)
 
 <br>
+
 #### Steps
 
 	cd $HOME
