@@ -22,11 +22,13 @@ echo -e "
 
         -h, --help           Open this help menu
         -n, --name           Project Name
+        -d, --default        Default Options
         -g, --gitignore      Use .gitignore
+        -t, --tfa            2FA (Use this if you have 2FA activated for GitHub)
         -p, --public         Set GitHub Repository Visibility to Public
         -c, --code           Automatically opens Visual Studio Code
 
-    Ex: mkproj -n MySexyPythonProject -p -c -g \"python,jupyternotebooks,linux,visualstudiocode,pycharm\"
+    Ex: mkproj -n MySexyPythonProject -p -t -c -g \"python,jupyternotebooks,linux,visualstudiocode,pycharm\"
 
 "
 exit
@@ -37,6 +39,7 @@ exit
 CODE=false
 PUBLIC=false
 GITIGNORE=false
+TFA=false
 NAME=""
 
 POSITIONAL_ARGS=()
@@ -46,6 +49,11 @@ while [[ $# -gt 0 ]]; do
         -h|--help)
             shift # past argument
             HELP
+            ;;
+        -d|--default)
+            shift # past argument
+            CODE=true
+            TFA=true
             ;;
         -n|--name)
             NAME=$2
@@ -65,6 +73,10 @@ while [[ $# -gt 0 ]]; do
             shift # past argument
             shift # past value
             GITIGNORE=true
+            ;;
+        -t|--tfa)
+            shift # past argument
+            TFA=true
             ;;
         -*|--*)
             echo "Unknown option $1"
@@ -93,8 +105,9 @@ MAIN () {
     
     if [ $GITIGNORE = true ]; then
         wget -c https://www.toptal.com/developers/gitignore/api/$VALUES_GI -O .gitignore 2>/dev/null
+        echo ".obsidian" >> .gitignore
+        echo ".log" >> .gitignore
     fi
-    
 }
 
 MAIN
