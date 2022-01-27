@@ -25,7 +25,7 @@
 - [x] ~~`git add .`~~
 - [x] ~~`git commit -m "initial commit"`~~
 - [x] ~~`git push -u origin main`~~
-- [ ] `code .`
+- [x] `code .`
 
 
 ### Requirements

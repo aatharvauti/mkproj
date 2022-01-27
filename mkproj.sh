@@ -134,6 +134,11 @@ MAIN () {
     git add .gitignore && git commit -m ".gitignore"
     git push -u origin main
     rm geckodriver.log
+
+    if [ $CODE = true ]; then
+        echo "Opening Visual Studio Code"
+        code .
+    fi
 }
 
 MAIN
