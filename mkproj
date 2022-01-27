@@ -107,7 +107,8 @@ MAIN () {
     # create a new directory
     # create a README.md file and add # $NAME to it (tradition)
     echo "Creating Project ${NAME}"
-    cd $HOME/code/ && mkdir $NAME && cd $NAME && touch README.md && echo "# ${NAME}" >> README.md
+    cd $HOME && mkdir projects
+    cd $HOME/projects/ && mkdir $NAME && cd $NAME && touch README.md && echo "# ${NAME}" >> README.md
     
     # if gitignore it used
     if [ $GITIGNORE = true ]; then
