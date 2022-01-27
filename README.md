@@ -14,8 +14,9 @@
 #### Technical Answer (and EL Plan):
 - [ ] Argument Parser will play a key role: DESIGN THE PROGRAM
 - [ ] Navigate to $HOME/code (This is my projects folder)
+- [ ] `mkdir $1` 
 - [ ] `touch README.md && echo $1 > README.md`
-- [ ] `gi "bunch,of,arguments,again,depends,on,the,project`
+- [ ] `gi "bunch,of,arguments,again,depends,on,the,project"`
 - [ ] `git init`
 - [ ] Web Scraping using Selenium to Create a GitHub Repository
 - [ ] `git remote add origin git@github.com:username/{$1}.git`
