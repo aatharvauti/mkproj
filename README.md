@@ -29,10 +29,10 @@
 
 <br>
 
-### Installation
+## Installation
 ---
 
-##### Requirements:
+### Requirements:
 - Install python packages
 	
 		python3 -m pip install -r requirements.txt
@@ -43,12 +43,17 @@
 
 <br>
 
-#### Steps
+### Installation Steps:
 
 	cd $HOME
 	git clone https://github.com/aatharvauti/mkproj.git
 	cd mkproj
 	chmod +x mkproj
-	export PATH=$HOMEmkproj:$PATH
+	export PATH=$HOME/mkproj:$PATH
+	touch .env
 
----
+.env file contents
+
+	USERNAME="yourgithubusername"
+	PASSWORD="yourgithubpassword"
+
