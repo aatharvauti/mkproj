@@ -30,3 +30,50 @@ echo -e "
 "
 exit
 }
+
+#// Argument Parser Switch Case
+
+CODE=false
+PUBLIC=false
+GITIGNORE=false
+
+POSITIONAL_ARGS=()
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -h|--help)
+            shift # past argument
+            HELP
+            ;;
+        -c|--code)
+            shift # past argument
+            CODE=true
+            ;;
+        -p|--public)
+            shift # past argument
+            PUBLIC=true
+            ;;
+        -g|--gitignore)
+            VALUES_GI="$2"
+            shift # past argument
+            shift # past value
+            GITIGNORE=true
+            ;;
+        -*|--*)
+            echo "Unknown option $1"
+            exit 1
+            ;;
+        *)
+            POSITIONAL_ARGS+=("$1") # save positional arg
+            shift # past argument
+            ;;
+    esac
+done
+
+set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
+
+# // Error
+if [[ -n $1 ]]; then
+    echo "Last line of file specified as non-opt/last argument:"
+    tail -1 "$1"
+fi
