@@ -25,12 +25,13 @@
 - [x] ~~`git add .`~~
 - [x] ~~`git commit -m "initial commit"`~~
 - [x] ~~`git push -u origin main`~~
-- [x] `code .`
+- [x] ~~`code .`~~
 
-
-### Requirements
+<br>
+### Installation
 ---
 
+##### Requirements:
 - Install python packages
 	
 		python3 -m pip install -r requirements.txt
@@ -38,5 +39,14 @@
 - wget tool
 - [Firefox Web Driver](https://dev.to/eugenedorfling/installing-the-firefox-web-driver-on-linux-for-selenium-d45)
 - idk if anything else, open an issue if something's missing :)
+
+<br>
+#### Steps
+
+	cd $HOME
+	git clone https://github.com/aatharvauti/mkproj.git
+	cd mkproj
+	chmod +x mkproj
+	export PATH=$HOMEmkproj:$PATH
 
 ---
