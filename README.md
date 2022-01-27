@@ -12,6 +12,7 @@
 - code . (mostly)
 
 #### Technical Answer (and EL Plan):
+- [x] Help Menu
 - [ ] Argument Parser will play a key role: DESIGN THE PROGRAM
 - [ ] Navigate to $HOME/code (This is my projects folder)
 - [ ] `mkdir $1` 
@@ -36,3 +37,5 @@
 
 - [gi command line](https://docs.gitignore.io/install/command-line)
 - idk if anything else, open an issue if something's missing :)
+
+---
