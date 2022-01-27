@@ -13,7 +13,7 @@
 
 #### Technical Answer (and EL Plan):
 - [x] Help Menu
-- [ ] Argument Parser will play a key role: DESIGN THE PROGRAM
+- [x] Argument Parser will play a key role: DESIGN THE PROGRAM
 - [ ] Navigate to $HOME/code (This is my projects folder)
 - [ ] `mkdir $1` 
 - [ ] `touch README.md && echo $1 > README.md`
