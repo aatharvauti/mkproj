@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#// HELP Menu
+
 HELP () {
 
 echo -e "
@@ -36,10 +38,12 @@ exit
 
 #// Argument Parser Switch Case
 
+# initializing variables
 CODE=false
 PUBLIC=false
 GITIGNORE=false
 TFA=false
+USERNAME="aatharvauti"
 NAME=""
 
 POSITIONAL_ARGS=()
@@ -91,27 +95,43 @@ done
 
 set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
 
-# // Error
+#// Error
 if [[ -n $1 ]]; then
     echo "Last line of file specified as non-opt/last argument:"
     tail -1 "$1"
 fi
 
-
+#// Main Function
 MAIN () {
 
+    # create a new directory
+    # create a README.md file and add # $NAME to it (tradition)
     echo "Creating Project ${NAME}"
     cd $HOME/code/ && mkdir $NAME && cd $NAME && touch README.md && echo "# ${NAME}" >> README.md
     
+    # if gitignore it used
     if [ $GITIGNORE = true ]; then
+        
+        # toptal works on the value at the end of URL
+        # to get list of all possible values, install gi command line and run "gi list"
         wget -c https://www.toptal.com/developers/gitignore/api/$VALUES_GI -O .gitignore 2>/dev/null
+        
+        # i use obsidian to edit markdown files, so adding .obsidian
         echo ".obsidian" >> .gitignore
+        
+        # logs are annoying
         echo ".log" >> .gitignore
     fi
 
+    # 2 factor auth for github
+    # this will further ask the user to enter OTP in their terminal to continue
     if [ $TFA = true ]; then
+        
+        # option to set repo visibility on github
+        # by default all repos will be private
         if [ $PUBLIC = true ]; then
             echo "WARNING: Setting Repository Visibility to Public"
+            # -W ignore ignores any warnings thrown by python
             python3 -W ignore $HOME/code/mkproj/mkrepo.py $NAME --public --tfa 
         else
             echo "Private"
@@ -127,12 +147,23 @@ MAIN () {
         fi
     fi
 
+    # 2>/dev/null is used to supress the output
     git init 2>/dev/null
+    
+    # by default git init creates branch going by the name "master"
+    # but github uses "main" as default
+    # so we rename the branch
     git branch -M main
-    git remote add origin git@github.com:aatharvauti/$NAME.git
+    
+    # add remote origin to the local git repo
+    git remote add origin git@github.com:$USERNAME/$NAME.git
+    
     git add README.md && git commit -m "initial commit"
     git add .gitignore && git commit -m ".gitignore"
+    
     git push -u origin main
+    
+    # for some reason geckodriver.log gets placed in our project folder
     rm geckodriver.log
 
     if [ $CODE = true ]; then
