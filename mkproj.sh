@@ -108,6 +108,24 @@ MAIN () {
         echo ".obsidian" >> .gitignore
         echo ".log" >> .gitignore
     fi
+
+    if [ $TFA = true ]; then
+        if [ $PUBLIC = true ]; then
+            echo "WARNING: Setting Repository Visibility to Public"
+            python3 -W ignore $HOME/code/mkproj/mkrepo.py $NAME --public --tfa 
+        else
+            echo "Private"
+            python3 -W ignore $HOME/code/mkproj/mkrepo.py $NAME --private --tfa
+        fi
+    else
+        if [ $PUBLIC = true ]; then
+            echo "WARNING: Setting Repository Visibility to Public"
+            python3 -W ignore $HOME/code/mkproj/mkrepo.py $NAME --public
+        else
+            echo "Private"
+            python3 -W ignore $HOME/code/mkproj/mkrepo.py $NAME --private
+        fi
+    fi
 }
 
 MAIN

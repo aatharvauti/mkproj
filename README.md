@@ -18,8 +18,8 @@
 - [x] ~~`mkdir $NAME && cd $NAME`~~
 - [x] ~~`touch README.md && echo "# ${NAME}" >> README.md`~~
 - [x] ~~`wget "bunch,of,arguments,again,depends,on,the,project"`~~
+- [x] ~~Web Scraping using Selenium to Create a GitHub Repository~~
 - [ ] `git init`
-- [ ] Web Scraping using Selenium to Create a GitHub Repository
 - [ ] `git remote add origin git@github.com:username/{$1}.git`
 - [ ] `git branch -m main`
 - [ ] `git add .`
