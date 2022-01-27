@@ -36,6 +36,7 @@
 		python3 -m pip install -r requirements.txt
 
 - wget tool
+- [Firefox Web Driver](https://dev.to/eugenedorfling/installing-the-firefox-web-driver-on-linux-for-selenium-d45)
 - idk if anything else, open an issue if something's missing :)
 
 ---
