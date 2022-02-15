@@ -49,7 +49,8 @@
 	git clone https://github.com/aatharvauti/mkproj.git
 	cd mkproj
 	chmod +x mkproj
-	export PATH=$HOME/mkproj:$PATH
+	export PATH="$PATH:$HOME/mkproj"
+	vim mkproj # set USERNAME (one time)
 	touch .env
 
 .env file contents
