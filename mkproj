@@ -43,7 +43,9 @@ CODE=false
 PUBLIC=false
 GITIGNORE=false
 TFA=false
-USERNAME="aatharvauti"
+
+# PLEASE SET USERNAME
+USERNAME=""
 NAME=""
 
 POSITIONAL_ARGS=()
